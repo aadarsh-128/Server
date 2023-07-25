@@ -13,6 +13,7 @@ app.get('/discordToken', (req, res) => {
   console.log('Received GET request:');
   console.log('Request Body:', req.body);
   console.log('Request Body:', req.params);
+  console.log(req);
   //console.log('Headers:', req.headers);
 
   // Send a 200 status code in the response
