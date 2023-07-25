@@ -8,11 +8,12 @@ const port = process.env.port || 3000; // You can change this port number to you
 app.use(bodyParser.json());
 
 // POST API endpoint for /discordToken
-app.post('/discordToken', (req, res) => {
+app.get('/discordToken', (req, res) => {
   // Log the request and headers
-  console.log('Received POST request:');
+  console.log('Received GET request:');
   console.log('Request Body:', req.body);
-  console.log('Headers:', req.headers);
+  console.log('Request Body:', req.params);
+  //console.log('Headers:', req.headers);
 
   // Send a 200 status code in the response
   res.sendStatus(200);
